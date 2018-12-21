@@ -48,6 +48,6 @@
   "start": "node app.js",
   "homepage": "https://github.com/patrinoua/marvelApi#readme",
   "engines": {
-    "node": "10.3.0"
+    "node": "8.9.4"
   }
 }
