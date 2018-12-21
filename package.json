@@ -32,12 +32,7 @@
     "extends": "react-app"
   },
   "proxy": "http://localhost:5000/",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
   "description": "To run this app run:",
   "main": "server.js",
   "repository": {
@@ -49,5 +44,6 @@
   "bugs": {
     "url": "https://github.com/patrinoua/marvelApi/issues"
   },
+  "start": "node app.js",
   "homepage": "https://github.com/patrinoua/marvelApi#readme"
 }
