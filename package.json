@@ -46,5 +46,8 @@
     "url": "https://github.com/patrinoua/marvelApi/issues"
   },
   "start": "node app.js",
-  "homepage": "https://github.com/patrinoua/marvelApi#readme"
+  "homepage": "https://github.com/patrinoua/marvelApi#readme",
+  "engines": {
+    "node": "10.3.0"
+  }
 }
