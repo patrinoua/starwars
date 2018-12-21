@@ -22,9 +22,8 @@ export const SearchBarContainer = styled.div`
 
 export const StyledSelect = styled(Select)`
   width: 25%;
-  padding-left: 10px;
-  display: inline-block;
-  color: MovieDiv black;
+  padding-left: 3px;
+  color: black;
   font-size: 12px;
 `
 
