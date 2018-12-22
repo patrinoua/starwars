@@ -19,6 +19,10 @@ export const SearchBarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   background: black;
+  @media (max-width: 700px) {
+    width: auto;
+    margin: 5px;
+  }
 `
 
 export const StyledSelect = styled(Select)`
@@ -60,6 +64,11 @@ export const StarwarsMovieBoard = styled.div`
   & div:last-child {
     margin-bottom: 5px;
   }
+  @media (max-width: 700px) {
+    width: auto;
+    font-size: 0.8em;
+    margin: 5px;
+  }
 `
 export const SelectedMovieContainer = styled.div`
   width: 580px;
@@ -71,6 +80,11 @@ export const SelectedMovieContainer = styled.div`
   opacity: 0.9;
   ::-webkit-scrollbar {
     display: none;
+  }
+  @media (max-width: 700px) {
+    width: auto;
+    font-size: 0.8em;
+    margin: 5px;
   }
 `
 export const MovieDiv = styled.div`
@@ -85,6 +99,10 @@ export const MovieDiv = styled.div`
   grid-template-columns: 25% 62% 12%;
   align-items: center;
   text-decoration: none;
+  @media (max-width: 700px) {
+    width: auto;
+    grid-template-columns: 20% 60% 19%;
+  }
 `
 export const StarwarsImage = styled.div`
   position: absolute;

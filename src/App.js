@@ -140,7 +140,7 @@ class App extends Component {
         <LogoContainer>
           <Logo />
           <Footer>
-            Web Design & Development -
+            Web Design & Development –
             <a
               href="http://angeliki.herokuapp.com"
               target="_blank"
