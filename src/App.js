@@ -8,7 +8,9 @@ import {
   SearchContainer,
   SearchBarContainer,
   StarwarsImage,
+  StarwarsMovieBoard,
   SelectedMovieContainer,
+  MovieDiv,
   StyledSelect,
   Logo,
   LogoContainer
@@ -165,12 +167,16 @@ class App extends Component {
               styles={customStyles}
             />
           </SearchBarContainer>
-          {moviesExist && (
+          {moviesExist ? (
             <MovieList
               filteredMovies={filteredMovies}
               movies={movies}
               handleState={this.handleState}
             />
+          ) : (
+            <StarwarsMovieBoard>
+              <MovieDiv>Loading movies...</MovieDiv>
+            </StarwarsMovieBoard>
           )}
           <SelectedMovieContainer>
             {this.state.selectedMovie.fields ? (

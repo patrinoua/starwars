@@ -23,7 +23,7 @@ export const SearchBarContainer = styled.div`
 
 export const StyledSelect = styled(Select)`
   width: 40%;
-  font-size: 12px;
+  font-size: 13px;
   margin: 5px;
 `
 
@@ -35,7 +35,7 @@ export const SearchBar = styled.input`
   border: 3px solid #fee233;
   background: black;
   color: #fee233;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   &::-webkit-input-placeholder {
     color: #fee233;
@@ -47,7 +47,8 @@ export const SearchBar = styled.input`
 
 export const StarwarsMovieBoard = styled.div`
   width: 600px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  min-height: 50px;
   background: white;
   overflow: scroll;
   background: black;
@@ -55,6 +56,9 @@ export const StarwarsMovieBoard = styled.div`
   opacity: 0.9;
   ::-webkit-scrollbar {
     display: none;
+  }
+  & div:last-child {
+    margin-bottom: 5px;
   }
 `
 export const SelectedMovieContainer = styled.div`
@@ -72,13 +76,14 @@ export const SelectedMovieContainer = styled.div`
 export const MovieDiv = styled.div`
   font-weight: 600;
   font-size: 0.9em;
-  padding: 10px;
+  padding: 6px 10px;
   :hover {
     cursor: pointer;
     background: blue;
   }
   display: grid;
-  grid-template-columns: 25% 63% 12%;
+  grid-template-columns: 25% 62% 12%;
+  align-items: center;
   text-decoration: none;
 `
 export const StarwarsImage = styled.div`
