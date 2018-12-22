@@ -21,8 +21,7 @@
     "concurrently": "^3.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node server",
     "test": "react-scripts test"
   },
   "eslintConfig": {
@@ -36,7 +35,6 @@
   },
   "author": "",
   "license": "ISC",
-  "start": "node app.js",
   "homepage": "https://github.com/patrinoua/marvelApi#readme",
   "engines": {
     "node": "8.9.4"

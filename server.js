@@ -1,12 +1,24 @@
 const express = require('express')
 const app = express()
-const bodyParser = require('body-parser')
-const port = process.env.PORT || 5000
+const compression = require('compression')
 
-app.use(bodyParser.json())
+app.use(compression())
 
-app.get('/', function(req, res) {
+if (process.env.NODE_ENV !== 'production') {
+  app.use(
+    '/bundle.js',
+    require('http-proxy-middleware')({
+      target: 'http://localhost:8081/'
+    })
+  )
+} else {
+  app.use('/bundle.js', (req, res) => res.sendFile(`${__dirname}/bundle.js`))
+}
+
+app.get('*', function(req, res) {
   res.sendFile(__dirname + '/index.html')
 })
 
-app.listen(port, () => console.log(`Listening on port ${port}`))
+app.listen(8080, function() {
+  console.log("I'm listening.")
+})
