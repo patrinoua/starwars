@@ -9,7 +9,6 @@ export default class MovieList extends React.Component {
       <StarwarsMovieBoard>
         {filteredMovies.length > 0
           ? filteredMovies.map(movie => {
-              console.log(movie)
               return (
                 <Movie
                   handleState={this.props.handleState}

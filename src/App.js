@@ -104,7 +104,7 @@ class App extends Component {
         <SearchContainer>
           <SearchBarContainer>
             <StyledSelect
-              placeholder={'Short by'}
+              placeholder={'Sort by'}
               onChange={this.handleSortChange}
               options={options}
             />
