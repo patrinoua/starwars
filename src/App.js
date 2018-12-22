@@ -12,8 +12,9 @@ import {
   SelectedMovieContainer,
   MovieDiv,
   StyledSelect,
+  LogoContainer,
   Logo,
-  LogoContainer
+  Footer
 } from './styles/elements'
 import { customSelectStyles, selectOptions } from './styles/configSelect'
 import MovieList from './MovieList'
@@ -138,6 +139,16 @@ class App extends Component {
         <StarwarsImage />
         <LogoContainer>
           <Logo />
+          <Footer>
+            Web Design & Development -
+            <a
+              href="http://angeliki.herokuapp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Angeliki Patrinou
+            </a>
+          </Footer>
         </LogoContainer>
       </AppContainer>
     )

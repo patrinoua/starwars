@@ -114,3 +114,21 @@ export const Logo = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
 `
+export const Footer = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  font-size: 12px;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  color: #fee233;
+  font-weight: 500;
+  & a {
+    color: #fee233;
+    text-decoration: none;
+    padding-left: 3px;
+  }
+`
