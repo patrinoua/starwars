@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 export const Small = styled.a`
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
 `
 export const Regular = styled.a`
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
 `
 export const Bold = styled.a`
   font-size: 18px;

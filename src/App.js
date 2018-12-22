@@ -4,7 +4,6 @@ import axios from 'axios'
 import { Regular } from './styles/typography'
 import {
   AppContainer,
-  SearchButton,
   SearchBar,
   SearchContainer,
   SearchBarContainer,
@@ -95,27 +94,76 @@ class App extends Component {
     let moviesExist = movies.length > 0
 
     const options = [
-      { value: 'year', label: 'Year' },
-      { value: 'episode', label: 'Episode' }
+      { value: 'year', label: 'Sort by Year' },
+      { value: 'episode', label: 'Sort by Episode' }
     ]
 
+    const customStyles = {
+      option: (provided, state) => ({
+        ...provided,
+        color: state.isSelected ? 'blue' : 'black',
+        backgroundColor: 'none'
+      }),
+      container: (provided, state) => ({
+        ...provided,
+        color: '#fee233'
+      }),
+      menu: (provided, state) => ({
+        ...provided,
+        background: '#fee233',
+        borderRadius: '0px',
+        fontWeight: '600'
+      }),
+      multiValueRemove: (provided, state) => ({
+        ...provided,
+        background: 'purple'
+      }),
+      control: () => ({
+        display: 'flex'
+      }),
+      indicatorSeparator: provided => ({
+        ...provided,
+        backgroundColor: '#fee233'
+      }),
+      dropdownIndicator: provided => ({
+        ...provided,
+        color: '#fee233'
+      }),
+      singleValue: (provided, state) => {
+        const opacity = state.isDisabled ? 0.5 : 1
+        const transition = 'opacity 300ms'
+        const color = '#fee233'
+        const fontWeight = '600'
+        return {
+          ...provided,
+          opacity,
+          color,
+          fontWeight,
+          transition
+        }
+      },
+      placeholder: () => ({
+        color: '#fee233',
+        fontWeight: '600'
+      })
+    }
     return (
       <AppContainer>
         <SearchContainer>
           <SearchBarContainer>
-            <StyledSelect
-              placeholder={'Sort by'}
-              onChange={this.handleSortChange}
-              options={options}
-            />
             <SearchBar
               id="searchbar"
               type="text"
               name="search"
-              placeholder="Search"
+              placeholder="Search by Episode Name or Year"
               onChange={this.handleChange}
             />
-            <SearchButton> SEARCH </SearchButton>
+            <StyledSelect
+              placeholder={'Sort by year or episode'}
+              onChange={this.handleSortChange}
+              options={options}
+              styles={customStyles}
+            />
           </SearchBarContainer>
           {moviesExist && (
             <MovieList

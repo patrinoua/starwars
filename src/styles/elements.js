@@ -13,35 +13,34 @@ export const SearchContainer = styled.div`
 `
 
 export const SearchBarContainer = styled.div`
-  padding: 20px 0px 10px 0px;
+  padding-top: 6px;
+  border-radius-top: 4px 4px 0 0;
   display: flex;
-  color: #fee233;
   justify-content: space-between;
   align-items: center;
+  background: black;
 `
 
 export const StyledSelect = styled(Select)`
-  width: 25%;
-  padding-left: 3px;
-  color: black;
+  width: 40%;
   font-size: 12px;
+  margin: 5px;
 `
 
 export const SearchBar = styled.input`
-  width: 40%;
+  width: 53%;
+  margin: 5px;
   padding: 10px;
   z-index: 10;
-`
-export const SearchButton = styled.button`
-  background-color: #fee233;
-  border-radius: 3px;
+  border: none;
+  background: #fee233;
   font-size: 12px;
   font-weight: 700;
-  padding: 10px;
-  width: 23%;
-  &:hover {
-    cursor: pointer;
-    transform: translateY(1px);
+  &::-webkit-input-placeholder {
+    color: black;
+  }
+  &:focus {
+    outline: none;
   }
 `
 
@@ -81,25 +80,6 @@ export const MovieDiv = styled.div`
   grid-template-columns: 20% 65% 15%;
   text-decoration: none;
 `
-export const LogoContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-`
-export const Logo = styled.div`
-  padding-bottom: 5%;
-  width: 70%;
-  min-width: 500px;
-  height: 40%;
-  background-image: url(Logo.svg.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-`
 export const StarwarsImage = styled.div`
   position: absolute;
   width: 100%;
@@ -108,4 +88,23 @@ export const StarwarsImage = styled.div`
   z-index: -1;
   background-image: url(starwarsImg.jpg);
   background-size: cover;
+`
+
+export const LogoContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+`
+export const Logo = styled.div`
+  margin-top: 6%;
+  width: 70%;
+  min-height: 500px;
+  background-image: url(Logo.svg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 `
