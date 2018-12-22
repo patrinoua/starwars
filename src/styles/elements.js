@@ -93,7 +93,7 @@ export const LogoContainer = styled.div`
 `
 export const Logo = styled.div`
   padding-bottom: 5%;
-  width: 60%;
+  width: 70%;
   min-width: 500px;
   height: 40%;
   background-image: url(Logo.svg.png);
