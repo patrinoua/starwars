@@ -21,8 +21,13 @@
     "concurrently": "^3.5.0"
   },
   "scripts": {
-    "start": "harp server --port $PORT",
-    "test": "react-scripts test"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "eslintConfig": {
     "extends": "react-app"

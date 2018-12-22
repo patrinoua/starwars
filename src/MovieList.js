@@ -9,13 +9,22 @@ export default class MovieList extends React.Component {
       <StarwarsMovieBoard>
         {filteredMovies.length > 0
           ? filteredMovies.map(movie => {
+              console.log(movie)
               return (
-                <Movie handleState={this.props.handleState} movie={movie} />
+                <Movie
+                  handleState={this.props.handleState}
+                  movie={movie}
+                  key={movie.fields.created}
+                />
               )
             })
           : movies.map(movie => {
               return (
-                <Movie handleState={this.props.handleState} movie={movie} />
+                <Movie
+                  handleState={this.props.handleState}
+                  movie={movie}
+                  key={movie.fields.created}
+                />
               )
             })}
       </StarwarsMovieBoard>
