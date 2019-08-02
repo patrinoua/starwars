@@ -41,7 +41,9 @@ class App extends Component {
     if (event.target.value.length > 0) {
       let filteredMovies = movies.filter(movie => {
         return (
-          movie.fields.title.includes(event.target.value) ||
+          movie.fields.title
+            .toLowerCase()
+            .includes(event.target.value.toLowerCase()) ||
           movie.fields.release_date.includes(event.target.value)
         )
       })

@@ -50,7 +50,7 @@ export const SearchBar = styled.input`
 `
 
 export const StarwarsMovieBoard = styled.div`
-  width: 600px;
+  width: 610px;
   margin-bottom: 10px;
   min-height: 50px;
   background: white;
@@ -73,13 +73,15 @@ export const StarwarsMovieBoard = styled.div`
 `
 export const SelectedMovieContainer = styled.div`
   width: 580px;
-  padding: 10px;
+  padding: 15px;
   overflow: scroll;
   min-height: 70px;
   background: black;
   color: #fee233;
   opacity: 0.9;
-  height: 230px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
   ::-webkit-scrollbar {
     display: none;
   }

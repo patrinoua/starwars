@@ -17,8 +17,9 @@ export const Regular = styled.a`
 `
 export const Bold = styled.a`
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 800;
   padding: 5px 0;
+  margin-bottom: 5px;
   @media (max-width: 700px) {
     font-size: 1em;
   }

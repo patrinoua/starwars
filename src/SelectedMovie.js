@@ -6,12 +6,11 @@ export default function SelectedMovie(props) {
   return (
     <React.Fragment>
       <Bold>{title}</Bold>
-      <br />
       <Regular>{opening_crawl}</Regular>
       <br />
-      <br />
-      <Bold> Director: </Bold>
-      <Regular>{director}</Regular>
+      <div>
+        <Bold> Director: </Bold> {director}
+      </div>
     </React.Fragment>
   )
 }
