@@ -21,29 +21,22 @@ import MovieList from './MovieList'
 import SelectedMovie from './SelectedMovie'
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      value: '',
-      movies: [],
-      selectedMovie: '',
-      selectedSortOption: '',
-      filteredMovies: [],
-      sortedMovies: []
-    }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSortChange = this.handleSortChange.bind(this)
-    this.handleState = this.handleState.bind(this)
-    this.sortMovieArray = this.sortMovieArray.bind(this)
+  state = {
+    value: '',
+    movies: [],
+    selectedMovie: '',
+    selectedSortOption: '',
+    filteredMovies: [],
+    sortedMovies: []
   }
-  componentDidMount() {
+  componentDidMount = () => {
     axios.get('https://star-wars-api.herokuapp.com/films').then(res => {
       this.setState({
         movies: res.data
       })
     })
   }
-  handleChange(event) {
+  handleChange = event => {
     const { movies } = this.state
     if (event.target.value.length > 0) {
       let filteredMovies = movies.filter(movie => {
@@ -62,18 +55,18 @@ class App extends Component {
       })
     }
   }
-  handleSortChange(selectedSortOption) {
+  handleSortChange = selectedSortOption => {
     this.setState({ selectedSortOption })
     this.sortMovieArray(selectedSortOption.value)
   }
-  handleState(state, data) {
+  handleState = (state, data) => {
     if (state === 'selectedMovie') {
       this.setState({
         selectedMovie: data
       })
     }
   }
-  sortMovieArray(sortType) {
+  sortMovieArray = sortType => {
     const { movies } = this.state
     let sortedArray = movies
     if (sortType === 'episode') {
