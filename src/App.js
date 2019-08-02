@@ -111,8 +111,7 @@ class App extends Component {
           </SearchBarContainer>
           {moviesExist ? (
             <MovieList
-              filteredMovies={filteredMovies}
-              movies={movies}
+              movies={(filteredMovies.length > 0 && filteredMovies) || movies}
               handleState={this.handleState}
             />
           ) : (
