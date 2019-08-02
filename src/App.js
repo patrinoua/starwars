@@ -69,10 +69,10 @@ class App extends Component {
     }
   }
   sortMovieArray = sortType => {
-    const { movies } = this.state
-    let sortedArray = movies
+    const { movies, filteredMovies } = this.state
+    let sortedArray = filteredMovies || movies
     if (sortType === 'episode') {
-      sortedArray = movies
+      sortedArray = filteredMovies || movies
       sortedArray.sort((a, b) => {
         return a.fields.episode_id - b.fields.episode_id
       })
@@ -91,7 +91,6 @@ class App extends Component {
   render() {
     const { movies, filteredMovies } = this.state
     let moviesExist = movies.length > 0
-
     return (
       <AppContainer>
         <SearchContainer>
