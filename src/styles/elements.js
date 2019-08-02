@@ -58,6 +58,7 @@ export const StarwarsMovieBoard = styled.div`
   background: black;
   color: #fee233;
   opacity: 0.9;
+  height: 210px;
   ::-webkit-scrollbar {
     display: none;
   }
@@ -78,6 +79,7 @@ export const SelectedMovieContainer = styled.div`
   background: black;
   color: #fee233;
   opacity: 0.9;
+  height: 230px;
   ::-webkit-scrollbar {
     display: none;
   }
