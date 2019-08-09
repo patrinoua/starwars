@@ -70,7 +70,12 @@ class App extends Component {
   }
   sortMovieArray = sortType => {
     const { movies, filteredMovies } = this.state
-    let sortedArray = filteredMovies || movies
+    let sortedArray = []
+    if (filteredMovies.length > 0) {
+      sortedArray = filteredMovies
+    } else {
+      sortedArray = movies
+    }
     if (sortType === 'episode') {
       sortedArray = filteredMovies || movies
       sortedArray.sort((a, b) => {
