@@ -1,5 +1,7 @@
 ## Starwars API
 
+![](https://github.com/patrinoua/starwars/blob/master/public/StarwarsScreenshot.png)
+
 https://starwars-spiced.herokuapp.com
 
 
